@@ -84,6 +84,8 @@ export default{
   list-style-type: none;
 }
  header{
+  /* position: sticky;
+  top: 0; */
   width: 100%;
   height: auto;
   background-color: grey;
@@ -121,19 +123,38 @@ export default{
   display: none;
  }
 
- /* @media screen and (max-width: 768px) {
-  header nav {
-    flex-direction: column;
-  }
-
-  nav li {
-    display: block;
-    margin: 0.5em 0;
-    text-align: center;
-  }
+ /* @media screen and (max-width: 834px) {
+  header{
+  width: 100%;
+  height: auto;
+  background-color: grey;
+  color: #fff;
+ }
+ h1{
+  font-family: cursive;
+ }
+ header nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+ nav li{
+  display: inline;
+  margin: 0 3em;
+ }
+ nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-style: italic;
+ }
+ #search{
+ width: 100%;
+ height: 40px;
+ }
 } */
 
-@media all and (300px <= width <= 768px) {
+@media all and (200px <= width <= 800px) {
   header nav{
     flex-direction: initial;
   }
@@ -192,6 +213,49 @@ export default{
   margin-left: 50px;
   cursor: pointer;
 }
+}
 
+@media all and (max-width:820px){
+    body{
+      overflow-x: hidden;
+    }
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+      
+      .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        text-align: center;
+        display: block;
+        transition: 0.3s;
+        text-align: center;
+    }
+      
+      .sidenav a:hover {
+        color: #f1f1f1;
+    }
+      
+      .sidenav .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+      }
+      .sidenav .closebtn:hover{
+        text-decoration: none;
+      }
 }
 </style>
