@@ -215,10 +215,28 @@ export default{
 }
 }
 
-@media all and (max-width:820px){
+@media all and (801px <= width <= 840px){
     body{
       overflow-x: hidden;
     }
+   
+ nav li{
+  display: inline;
+  margin: 0 1rem;
+ }
+ nav a{
+  color: white;
+  text-decoration: none;
+  font-weight: bolder;
+  font-style: italic;
+ }
+ #search{
+ width: 100%;
+ height: 40px;
+ }
+ 
+ 
+
     .sidenav {
         height: 100%;
         width: 0;

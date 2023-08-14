@@ -54,6 +54,17 @@
                 </RouterLink>
               </h3>
             </div>
+
+            <div class="worries">
+              <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+              <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
+              <h3 class="read">
+                <RouterLink to="/diary">
+                  READ <span>&raquo;</span>
+                </RouterLink>
+              </h3>
+            </div>
+
             <div class="worries">
               <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
               <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
@@ -127,6 +138,12 @@
   .worries h3{
     font-size: 1rem;
     font-weight: bold;
+  }
+  .worries span{
+    display: none;
+  }
+  .worries:hover span{
+    display: inline-block;
   }
   .read a{
     font-size: 1rem;
