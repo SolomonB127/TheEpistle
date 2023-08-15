@@ -34,45 +34,69 @@
      <div class="container">
       <div class="row">
         <div class="col">
-          <section>
-            <div class="worries">
-              <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
-              <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
-              <h3 class="read">
-                <RouterLink to="/diary">
-                  READ <span>&raquo;</span>
+          <section id="entriesCard">
+            <div  class="entriesCard">
+              <div class="f-row">
+                <RouterLink to="/entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
                 </RouterLink>
-              </h3>
-            </div>
 
-            <div class="worries">
-              <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
-              <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
-              <h3 class="read">
-                <RouterLink to="/diary">
-                  READ <span>&raquo;</span>
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
                 </RouterLink>
-              </h3>
-            </div>
 
-            <div class="worries">
-              <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
-              <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
-              <h3 class="read">
-                <RouterLink to="/diary">
-                  READ <span>&raquo;</span>
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
                 </RouterLink>
-              </h3>
-            </div>
+              </div>
 
-            <div class="worries">
-              <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
-              <h3>WHEN YOU (& YOUR PEOPLE) ARE <br> TROUBLED WHO DO YOU LOOK ONTO</h3>
-              <h3 class="read">
-                <RouterLink to="/diary">
-                  READ <span>&raquo;</span>
+              <!-- Second-Row -->
+              <div class="s-row">
+                <RouterLink to="/entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
                 </RouterLink>
-              </h3>
+
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU & (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
+                </RouterLink>
+
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
+                </RouterLink>
+              </div>
+
+              <!-- Third-Row -->
+              <div class="t-row">
+                <RouterLink to="/entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
+                </RouterLink>
+
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
+                </RouterLink>
+
+                <RouterLink to="/entries" class="entries">
+                  <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
+                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h4>Read <span>&raquo;</span></h4>
+                </RouterLink>
+              </div>
             </div>
           </section>
         </div>
@@ -126,35 +150,71 @@
     font-weight: bold;
     text-decoration: none;
   }
-  .worries{
-    text-align: center;
-    margin: 20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 10px 10px 6px  rgb(77, 68, 68);
-    display: inline-block;
-    background-color: burlywood;
+  /* Main Contents */
+  /* .entriesCard */
+  #entriesCard{
+    width: 20%;
+    margin: 40px 45%;
 }
-  .worries h3{
-    font-size: 1rem;
-    font-weight: bold;
+  .f-row{
+    display: flex;
+    justify-content: space-evenly;
   }
-  .worries span{
-    display: none;
+  .s-row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
   }
-  .worries:hover span{
-    display: inline-block;
+  .t-row{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 60px;
   }
-  .read a{
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: underline;
+  .entriesCard a{
+    margin-right: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-decoration: none;
+    font-size: 1.9rem;
     color: #000;
+    background-color: burlywood;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px #000;
   }
-  @media all and (200px <= width <= 700px) {
+.entriesCard img{
+    border-radius: 20px;
+}
+
+.entriesCard a h3{
+  font-weight: bold;
+}
+.entriesCard a h4{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: bold;
+}
+  @media all and (200px <= width <= 820px) {
     .author img{
     margin-left: 25%;
   }
+
+  /* entriesCard */
+  .f-row{
+      flex-wrap: wrap;
+    }
+  .entries{
+    margin-top: 60px;
+  }
+    .s-row{
+      flex-wrap: wrap;
+    }
+    .t-row{
+      flex-wrap: wrap;
+    }
 }
 
 </style>
