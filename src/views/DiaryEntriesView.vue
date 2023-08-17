@@ -1,5 +1,5 @@
 <template>
- <h1>con</h1>
+ <h1>Diary</h1>
 </template>
 
 <style>

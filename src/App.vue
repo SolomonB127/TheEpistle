@@ -47,12 +47,11 @@ export default{
           <li>
             <RouterLink to="/">Home</RouterLink>
           </li>
-
           <li>
             <RouterLink to="/about">About</RouterLink>
           </li>
           <li>
-            <RouterLink to="/diary">Diary Entries</RouterLink>
+            <RouterLink to="/entries">DiaryEntries</RouterLink>
           </li>
           <li>
             <RouterLink to="/contact">Contact</RouterLink>

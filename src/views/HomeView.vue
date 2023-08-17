@@ -19,11 +19,13 @@
         <div class="col">
           <section class="imgAuthor">
             <div class="author">
-              <img src="pictures\ann-voskamp.jpg" alt="" width="200">
-              <p class="selfIntro"> <RouterLink to="/about">
-                HI! i'm Omotolani Ezra and it's sooo good to be on this journey with you... <br> something else
-              </RouterLink>
-              </p>
+              <div class="centerContents">
+                <img src="pictures\ann-voskamp.jpg" alt="" width="200">
+                <p class="selfIntro"> <RouterLink to="/about">
+                  HI! i'm Omotolani Ezra and it's sooo good to be on this journey with you... <br> something else
+                  </RouterLink>
+                </p>
+              </div>
             </div>
           </section>
         </div>
@@ -37,7 +39,7 @@
           <section id="entriesCard">
             <div  class="entriesCard">
               <div class="f-row">
-                <RouterLink to="/entries">
+                <RouterLink to="/troubles">
                   <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
                   <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
                   <h4>Read <span>&raquo;</span></h4>
@@ -45,7 +47,7 @@
 
                 <RouterLink to="/entries" class="entries">
                   <img src="pictures\La microbiota en las adicciones.jpg" alt="" width="300">
-                  <h3>WHEN YOU &amp; (YOUR PEOPLE) ARE IN TROUBLE WHO DO YOU LOOK ONTO.</h3>
+                  <h3>Embracing the Dawn: Finding Courage Amidst Darkness. </h3>
                   <h4>Read <span>&raquo;</span></h4>
                 </RouterLink>
 
@@ -135,12 +137,20 @@
   span{
    font-style: oblique;
   }
-  
-  .author img{
-    margin: 20px 40%;
-    border-radius: 100%;
-    border: 3px solid #000;
-  }
+  .centerContents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center; /* Center-align the text */
+  height: 60vh;
+}
+.author img {
+  margin-bottom: 10px; 
+  border-radius: 100%;
+  border: 3px solid #000;
+}
+
   .selfIntro{
     text-align: center;
   }
@@ -183,7 +193,7 @@
     color: #000;
     background-color: burlywood;
     border-radius: 20px;
-    box-shadow: 10px 10px 10px #000;
+    box-shadow: 10px 10px 10px grey;
   }
 .entriesCard img{
     border-radius: 20px;
@@ -198,10 +208,6 @@
   font-weight: bold;
 }
   @media all and (200px <= width <= 820px) {
-    .author img{
-    margin-left: 25%;
-  }
-
   /* entriesCard */
   .f-row{
       flex-wrap: wrap;
