@@ -53,7 +53,55 @@
                   </h2>
                 </div>
 
-                <div class="entriesImgs">
+                <div class="entriesImgs" id="img-3">
+                  <h2>
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+              </div> 
+
+              <!-- Second row -->
+              <div class="s-row">
+                <div class="entriesImgs" id="img-4">
+                  <h2>
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+
+                <div class="entriesImgs" id="img-5">
+                  <h2>
+                     "... DO NOT BE AFRAID FOR JOY COMETH IN THE MORNING." <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+
+                <div class="entriesImgs" id="img-6">
+                  <h2>
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+              </div> 
+
+              <!-- Third row -->
+              <div class="t-row">
+                <div class="entriesImgs" id="img-7">
+                  <h2>
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+
+                <div class="entriesImgs" id="img-8">
+                  <h2>
+                     "... DO NOT BE AFRAID FOR JOY COMETH IN THE MORNING." <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+
+                <div class="entriesImgs" id="img-9">
                   <h2>
                       WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
                       <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
@@ -168,16 +216,31 @@
 .f-row {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.s-row {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 40px;
+}
+.t-row {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-  @media all and (200px <= width <= 820px) {
+  @media all and (200px <= width <= 1024px) {
+    
+    .entriesImgs{
+      margin-top: 40px;
+    }
+    
+    .entriesImgs{
+      margin-top: 40px;
+    }
   /* entriesCard */
   .f-row{
       flex-wrap: wrap;
     }
-  .entriesImgs{
-    margin-top: 60px;
-  }
     .s-row{
       flex-wrap: wrap;
     }
@@ -185,14 +248,11 @@
       flex-wrap: wrap;
     }
 }
-@media screen and (min-width: 834px) and (max-width: 1024px) {
-  .entriesImgs{
-    margin-top: 40px;
-  }
+/* @media screen and (min-width: 834px) and (max-width: 1024px) {
   .f-row {
    flex-wrap: wrap;
   }
-}
+} */
 
 
 </style>
