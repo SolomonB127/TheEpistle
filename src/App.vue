@@ -214,7 +214,7 @@ export default{
 }
 }
 
-@media all and (801px <= width <= 840px){
+@media all and (801px <= width <= 1024px){
     body{
       overflow-x: hidden;
     }
@@ -236,7 +236,7 @@ export default{
  
  
 
-    .sidenav {
+    /* .sidenav {
         height: 100%;
         width: 0;
         position: fixed;
@@ -273,6 +273,6 @@ export default{
       }
       .sidenav .closebtn:hover{
         text-decoration: none;
-      }
+      } */
 }
 </style>

@@ -41,7 +41,7 @@
               <div class="f-row">
                 <div class="entriesImgs">
                   <h2>
-                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
                       <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
                   </h2>
                 </div>
@@ -55,7 +55,7 @@
 
                 <div class="entriesImgs">
                   <h2>
-                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO
+                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO <br>
                       <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
                   </h2>
                 </div>
@@ -128,7 +128,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 330px;
+  width: 100%;
+  max-width: 330px;
+  margin: 0 auto;
   height: 500px;
   border-radius: 20px;
   box-shadow: 10px 10px 5px gray;
@@ -183,5 +185,14 @@
       flex-wrap: wrap;
     }
 }
+@media screen and (min-width: 834px) and (max-width: 1024px) {
+  .entriesImgs{
+    margin-top: 40px;
+  }
+  .f-row {
+   flex-wrap: wrap;
+  }
+}
+
 
 </style>
