@@ -41,25 +41,22 @@
               <div class="f-row">
                 <div class="entriesImgs">
                   <h2>
-                    <RouterLink to="\troubles">
                       WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO
-                    </RouterLink>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
+                  </h2>
+                </div>
+
+                <div class="entriesImgs" id="img-2">
+                  <h2>
+                     "... DO NOT BE AFRAID FOR JOY COMETH IN THE MORNING." <br>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
                   </h2>
                 </div>
 
                 <div class="entriesImgs">
                   <h2>
-                    <RouterLink to="\troubles">
                       WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO
-                    </RouterLink>
-                  </h2>
-                </div>
-
-                <div class="entriesImgs">
-                  <h2>
-                    <RouterLink to="\troubles">
-                      WHEN YOU &amp; (YOUR PEOPLE)  <br> ARE IN TROUBLE WHO DO  <br> YOU LOOK ONTO
-                    </RouterLink>
+                      <RouterLink to="/Troubles">Read <span>&raquo;</span></RouterLink>
                   </h2>
                 </div>
               </div> 
@@ -137,8 +134,29 @@
   box-shadow: 10px 10px 5px gray;
   text-align: center;
   opacity: 0.65;
+  cursor: pointer;
  }
+ #img-2 {
+  background-image: url(pictures/SunriseImg.jpg);
+ }
+.entriesImgs h2{
+  margin-top: 250px;
+  color: #000;
+  font-weight: bolder;
+}
 
+.entriesImgs h2 a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.entriesImgs h2 a span{
+  display: none;
+}
+.entriesImgs h2 a:hover span{
+  display: inline-block;
+  font-weight: bolder;
+}
  .entriesImgs:hover{
   position: relative;
   transition: .6s;
@@ -155,7 +173,7 @@
   .f-row{
       flex-wrap: wrap;
     }
-  .entries{
+  .entriesImgs{
     margin-top: 60px;
   }
     .s-row{
