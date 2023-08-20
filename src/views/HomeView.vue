@@ -109,6 +109,13 @@
                 </div>
               </div> 
             </div>
+            <div class="more">
+                <button>
+                  <RouterLink to="/entries">
+                    MORE&raquo;
+                  </RouterLink>
+                </button>
+            </div>
           </section>
         </div>
       </div>
@@ -227,12 +234,31 @@
   display: flex;
   justify-content: space-evenly;
 }
+.more{
+  text-align: center;
+  margin-top: 40px;
+}
+.more a{
+  color: #000;
+  text-decoration: none;
+  font-weight: bolder;
+}
+.more a:hover{
+  text-decoration: underline;
+}
+.more button{
+ border-radius: 20px;
+ width: auto;
+}
 
   @media all and (200px <= width <= 1024px) {
     
     .entriesImgs{
       margin-top: 40px;
     }
+    /* #more a{
+     font-size: 2rem;
+    } */
     
     .entriesImgs{
       margin-top: 40px;
