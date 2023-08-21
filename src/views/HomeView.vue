@@ -112,9 +112,25 @@
             <div class="more">
                 <button>
                   <RouterLink to="/entries">
-                    MORE&raquo;
+                    More posts
                   </RouterLink>
                 </button>
+            </div>
+          </section>
+        </div>
+      </div>
+     </div>
+
+     <div class="container">
+      <div class="row">
+        <div class="col">
+          <section id="quote">
+            <div class="quote">
+              <hr>
+              <p>
+                It is the Lord who goes before you. He will be with you; he will not leave you or forsake you. Do not fear or be dismayed.
+                <i style="text-decoration: underline;">Courtesy of Deuteronomy 31:8 ESV.</i>
+              </p>
             </div>
           </section>
         </div>
@@ -245,10 +261,36 @@
 }
 .more a:hover{
   text-decoration: underline;
+  transition: 0.8s ease-in;
+  color: #f0f8ff;
 }
 .more button{
  border-radius: 20px;
  width: auto;
+}
+.more button:hover{
+  background-color: #000;
+}
+
+/* Quotes */
+#quote{
+  margin-top: 40px;
+}
+.quote{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.quote p{
+  font-family: cursive;
+  font-weight: bolder;
+  font-size: 1.1rem;
+  margin-left: 50px;
+}
+.quote hr{
+  background-color: brown;
+  height: 2px;
+  width: 30%;
 }
 
   @media all and (200px <= width <= 1024px) {
@@ -256,9 +298,6 @@
     .entriesImgs{
       margin-top: 40px;
     }
-    /* #more a{
-     font-size: 2rem;
-    } */
     
     .entriesImgs{
       margin-top: 40px;
@@ -274,11 +313,15 @@
       flex-wrap: wrap;
     }
 }
-/* @media screen and (min-width: 834px) and (max-width: 1024px) {
-  .f-row {
-   flex-wrap: wrap;
-  }
-} */
+/* Qoutes */
+@media screen and (200px <= width <= 799px) {
+.quote hr{
+  display: none;
+}
+.quote p{
+  align-items: center;
+}
+}
 
 
 </style>
