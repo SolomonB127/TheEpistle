@@ -299,11 +299,22 @@
       margin-top: 40px;
       opacity: 1;
     }
-    
-    
-    .entriesImgs{
-      margin-top: 40px;
+    .entriesImgs:hover{
+      position: none;
+      transition: none;
+      bottom: 0px;
     }
+    .entriesImgs h2 a span{
+      font-weight: bolder;
+      display: inline;
+}
+.entriesImgs h2 a:hover span{
+  display: inline-block;
+}
+    
+    /* .entriesImgs{
+      margin-top: 40px;
+    } */
   /* entriesCard */
   .f-row{
       flex-wrap: wrap;
@@ -313,6 +324,16 @@
     }
     .t-row{
       flex-wrap: wrap;
+    }
+
+    /* More entries button */
+    .more a{
+      color: #fff;
+      text-decoration: underline;
+      font-weight: bolder;
+    }
+    .more button{
+      background-color: #000;
     }
 }
 /* Qoutes */
