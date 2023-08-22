@@ -297,7 +297,9 @@
     
     .entriesImgs{
       margin-top: 40px;
+      opacity: 1;
     }
+    
     
     .entriesImgs{
       margin-top: 40px;
