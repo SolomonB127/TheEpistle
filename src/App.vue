@@ -14,7 +14,6 @@ export default{
     },
     closeNav(){
       this.isOpen = false;
-      this.$router.push('/');
     }
   }
 }
@@ -38,7 +37,7 @@ export default{
             <a class="closebtn" @click="closeNav">&times;</a>
             <RouterLink to="/">Home</RouterLink>
             <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/diary">Diary Entries</RouterLink>
+            <RouterLink to="/entries">DiaryEntries</RouterLink>
             <RouterLink to="/contact">Contact</RouterLink>
           </div>
         </div>
