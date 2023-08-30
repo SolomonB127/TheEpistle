@@ -18,15 +18,19 @@ export default{
       this.isOpen = false;
     },
     subscribe() {
-      // Simulate a subscription by updating the isSubscribed state
       if (this.email.trim() === '') {
         this.error = 'Please enter a valid email.';
         return;
       }
+      
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(this.email)) {
+      this.error = 'Please enter a valid email.';
+      return;
+    }
 
-      // Simulate a successful subscription
       this.isSubscribed = true;
-      this.email = ''; // Clear the input field after subscribing
+      this.email = ''; 
       this.error = '';
     },
   },
