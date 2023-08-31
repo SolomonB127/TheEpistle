@@ -4,6 +4,7 @@ import { RouterLink, RouterView } from 'vue-router';
 export default{
   data(){
     return{
+      isSearchOpen: false,
       isOpen: false,
       email: '',
       error: '',
@@ -11,6 +12,9 @@ export default{
     };
   },
   methods: {
+    Opensearch(){
+      this.isSearchOpen = !this.isSearchOpen;
+    },
     openNav(){
       this.isOpen = true;
     },
@@ -39,7 +43,7 @@ export default{
 </script>
 
 <template>
-    <!-- Head/Nav Section -->
+  <!-- Head/Nav Section -->
     <header>
         <nav>
           <!-- Side nav -->
@@ -75,9 +79,12 @@ export default{
             </li>
           </ul>
 
-          <!-- <ul>
+          <ul>
             <li>
-              <img alt="" id="dark" v-if="isDarkTheme" src="pictures\icons8-sun-24.png" @click="toggleTheme">
+              <img alt="" class="Sbtn" src="pictures\icons8-search-150.png" @click="Opensearch">
+              <img/>
+            </li>
+              <!-- <img alt="" id="dark" v-if="isDarkTheme" src="pictures\icons8-sun-24.png" @click="toggleTheme">
               <img
                 v-else
                 src="pictures\icons8-dark-24.png"
@@ -85,12 +92,15 @@ export default{
                 id="dark"
                 @click="toggleTheme"
               />
-            </li>
-          </ul> -->
+            </li> -->
+          </ul>
         </nav> 
     </header>
+    <span>
+      <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen">
+    </span>
 
-      <RouterView />
+    <RouterView />
    
   <!-- Footer -->
   <footer>
@@ -160,6 +170,10 @@ export default{
   font-weight: bolder;
   font-style: italic;
  }
+.Sbtn{
+  width: 10%;
+  cursor: pointer;
+}
  #search{
  width: 100%;
  height: 40px;
