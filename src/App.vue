@@ -81,7 +81,7 @@ export default{
 
           <ul>
             <li>
-              <img alt="" class="Sbtn" src="pictures\icons8-search-150.png" @click="Opensearch">
+              <img alt="" class="Sbtn" src="pictures\icons8-search-150.png" @click="Opensearch" width="30">
               <img/>
             </li>
               <!-- <img alt="" id="dark" v-if="isDarkTheme" src="pictures\icons8-sun-24.png" @click="toggleTheme">
@@ -171,7 +171,7 @@ export default{
   font-style: italic;
  }
 .Sbtn{
-  width: 10%;
+  margin-right: 20px;
   cursor: pointer;
 }
  #search{
