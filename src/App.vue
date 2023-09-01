@@ -10,13 +10,16 @@ export default{
       error: '',
       isSubscribed: false,
       searchQuery: '',
-      suggestedCategories: [], // Array of suggested categories
+      suggestedCategories: [], 
       showSuggestions: false,
     };
   },
   methods: {
     Opensearch(){
       this.isSearchOpen = !this.isSearchOpen;
+      if (!this.isSearchOpen) {
+        this.showSuggestions = false;
+      }
     },
     openNav(){
       this.isOpen = true;
@@ -41,14 +44,11 @@ export default{
       this.error = '';
     },
     updateSuggestions() {
-      // Filter and update suggested categories based on searchQuery
-      // For simplicity, let's assume suggestedCategories is a static array
       this.suggestedCategories = ['Pride', 'Troubles', 'Joy', 'Peace'].filter(category =>
         category.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     },
     navigateToCategory(category) {
-      // Hide suggestions and navigate to the category page
       this.showSuggestions = false;
       this.$router.push(`/category/${category}`);
     },
@@ -113,11 +113,11 @@ export default{
     </header>
     <span>
       <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen" v-model="searchQuery" @input="updateSuggestions" @focus="showSuggestions = true">
-      <ul v-if="showSuggestions">
-      <li v-for="category in suggestedCategories" :key="category" @click="navigateToCategory(category)">
-        {{ category }}
-      </li>
-    </ul>
+      <ul v-if="showSuggestions" class="suggestions">
+        <li v-for="category in suggestedCategories" :key="category" @click="navigateToCategory(category)">
+          {{ category }}
+        </li>
+      </ul>
     </span>
 
     <RouterView />
@@ -197,6 +197,9 @@ export default{
  #search{
  width: 100%;
  height: 40px;
+ }
+ .suggestions{
+  font-size: 1.2rem;
  }
  #mainSidenav{
   display: none;
