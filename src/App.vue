@@ -9,6 +9,9 @@ export default{
       email: '',
       error: '',
       isSubscribed: false,
+      searchQuery: '',
+      suggestedCategories: [], // Array of suggested categories
+      showSuggestions: false,
     };
   },
   methods: {
@@ -36,6 +39,18 @@ export default{
       this.isSubscribed = true;
       this.email = ''; 
       this.error = '';
+    },
+    updateSuggestions() {
+      // Filter and update suggested categories based on searchQuery
+      // For simplicity, let's assume suggestedCategories is a static array
+      this.suggestedCategories = ['Pride', 'Troubles', 'Joy', 'Peace'].filter(category =>
+        category.toLowerCase().includes(this.searchQuery.toLowerCase())
+      );
+    },
+    navigateToCategory(category) {
+      // Hide suggestions and navigate to the category page
+      this.showSuggestions = false;
+      this.$router.push(`/category/${category}`);
     },
   },
 }
@@ -97,7 +112,12 @@ export default{
         </nav> 
     </header>
     <span>
-      <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen">
+      <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen" v-model="searchQuery" @input="updateSuggestions" @focus="showSuggestions = true">
+      <ul v-if="showSuggestions">
+      <li v-for="category in suggestedCategories" :key="category" @click="navigateToCategory(category)">
+        {{ category }}
+      </li>
+    </ul>
     </span>
 
     <RouterView />
