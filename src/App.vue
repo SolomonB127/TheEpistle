@@ -1,6 +1,7 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router';
 
+
 export default{
   data(){
     return{
@@ -44,14 +45,14 @@ export default{
       this.error = '';
     },
     updateSuggestions() {
-      this.suggestedCategories = ['Pride', 'Troubles', 'Joy', 'Peace'].filter(category =>
+      this.suggestedCategories = [].filter(category =>
         category.toLowerCase().includes(this.searchQuery.toLowerCase())
       );
     },
     navigateToCategory(category) {
-      this.showSuggestions = false;
-      this.$router.push(`/category/${category}`);
-    },
+    this.showSuggestions = false;
+    this.$router.push(`/category/${category}`);
+  },
   },
 }
 
@@ -114,12 +115,20 @@ export default{
     <span>
       <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen" v-model="searchQuery" @input="updateSuggestions" @focus="showSuggestions = true">
       <ul v-if="showSuggestions" class="suggestions">
-        <li v-for="category in suggestedCategories" :key="category" @click="navigateToCategory(category)">
-          {{ category }}
+        <h3>Suggested searches</h3>
+        <li>
+          <RouterLink to="/Troubles">troubles</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/Troubles">peace</RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/Troubles">care</RouterLink>
         </li>
       </ul>
     </span>
 
+   
     <RouterView />
    
   <!-- Footer -->
