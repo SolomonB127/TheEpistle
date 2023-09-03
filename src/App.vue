@@ -132,7 +132,7 @@ export default{
             <RouterLink to="/Troubles">TROUBLES</RouterLink>
           </li>
           <li>
-            <RouterLink to="/Troubles">PEACE</RouterLink>
+            <RouterLink to="/Peace">PEACE</RouterLink>
           </li>
           <li>
             <RouterLink to="/Cares">CARE</RouterLink>
