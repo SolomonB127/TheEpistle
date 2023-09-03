@@ -1,6 +1,6 @@
 <script >
 import { RouterLink, RouterView } from 'vue-router';
-
+import CareCategory from './components/SearchSuggestions/CareCategory.vue'
 
 export default{
   data(){
@@ -135,7 +135,7 @@ export default{
             <RouterLink to="/Troubles">PEACE</RouterLink>
           </li>
           <li>
-            <RouterLink to="/Troubles">CARE</RouterLink>
+            <RouterLink to="/Cares">CARE</RouterLink>
           </li>
         </ul>
         <ul >
@@ -152,7 +152,9 @@ export default{
       </div>
     </span>
 
-   
+    <!-- Search Suggestions Components -->
+    <CareCategory />
+    
     <RouterView />
    
   <!-- Footer -->
