@@ -114,18 +114,42 @@ export default{
     </header>
     <span>
       <input type="search" id="search" placeholder="Search Here..." autofocus="off" v-show="isSearchOpen" v-model="searchQuery" @input="updateSuggestions" @focus="showSuggestions = true">
-      <ul v-if="showSuggestions" class="suggestions">
-        <h3>Suggested searches</h3>
-        <li>
-          <RouterLink to="/Troubles">troubles</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/Troubles">peace</RouterLink>
-        </li>
-        <li>
-          <RouterLink to="/Troubles">care</RouterLink>
-        </li>
-      </ul>
+      <div id="suggetions" class="suggestions" v-if="showSuggestions">
+        <h3>Suggested Searches</h3>
+        <ul>
+          <li>
+            <RouterLink to="/Troubles">TROUBLES</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">PEACE</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">CARE</RouterLink>
+          </li>
+        </ul>
+        <ul >
+          <li>
+            <RouterLink to="/Troubles">TROUBLES</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">PEACE</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">CARE</RouterLink>
+          </li>
+        </ul>
+        <ul >
+          <li>
+            <RouterLink to="/Troubles">TROUBLES</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">PEACE</RouterLink>
+          </li>
+          <li>
+            <RouterLink to="/Troubles">CARE</RouterLink>
+          </li>
+        </ul>
+      </div>
     </span>
 
    
@@ -206,9 +230,29 @@ export default{
  #search{
  width: 100%;
  height: 40px;
+ font-family: 'Times New Roman', Times, serif;
+ }
+ /* suggested searches */
+ .suggestions h3{
+  text-align: center;
+ }
+ .suggestions ul{
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
  }
  .suggestions{
   font-size: 1.2rem;
+  width: 100%;
+  background-color: #6e6b6b;
+ }
+ .suggestions a{
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Times New Roman', Times, serif;
+ }
+ .suggestions a:hover{
+  text-decoration: underline;
  }
  #mainSidenav{
   display: none;
