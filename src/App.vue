@@ -97,18 +97,13 @@ export default{
 
           <ul>
             <li>
-              <img alt="" class="Sbtn" src="pictures\icons8-search-150.png" @click="Opensearch" width="30">
+              <img alt="" class="Sbtn" src="pictures\icons8-search-150.png"      @click="Opensearch" width="30">
               <img/>
             </li>
-              <!-- <img alt="" id="dark" v-if="isDarkTheme" src="pictures\icons8-sun-24.png" @click="toggleTheme">
-              <img
-                v-else
-                src="pictures\icons8-dark-24.png"
-                alt=""
-                id="dark"
-                @click="toggleTheme"
-              />
-            </li> -->
+            <li>
+              <img alt="" class="Sbtn" src="pictures\icons8-open-book-100.png"  @click="Opensearch" width="30">
+              <img/>
+            </li>
           </ul>
         </nav> 
     </header>
